@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const apiRoute = "http://localhost:5000/posts/";
-const commentRoute = "http://localhost:5000/posts/comment/";
+const apiRoute = "https://fistblogv2.onrender.com/posts/";
+const commentRoute = "https://fistblogv2.onrender.com/posts/comment/";
 
 export const getPosts = async () => await axios.get(apiRoute);
 
