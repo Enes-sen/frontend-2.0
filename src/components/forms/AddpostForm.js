@@ -70,7 +70,7 @@ const AddPostForm = () => {
           <FileBase64
   multiple={false}
   onDone={({ base64 }) => setFile(base64)}>
-    <Button>deneme</Button>
+    {<FaImage/>}
     </FileBase64>
         </FormGroup>
         <FormGroup>
