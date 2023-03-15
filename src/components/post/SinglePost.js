@@ -71,9 +71,9 @@ const SinglePost = () => {
             </Button>
           </div>
         </CardBody>
-      </Card>
-      <AddCommentForm />
+       <AddCommentForm />
       <CommentList/>
+      </Card>
     </div>
   );
 };
