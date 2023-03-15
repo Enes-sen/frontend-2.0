@@ -4,6 +4,7 @@ import { Button, Form, FormGroup, Input, Label } from "reactstrap";
 import { addComment } from "../../redux/actions/postActions";
 import { useParams } from 'react-router-dom';
 import alertify from "alertifyjs";
+import deleteLogo from "../../images/Kaldr_Logo.png";
 
 const AddCommentForm = () => {
   const [name, setName] = useState("");
@@ -28,6 +29,7 @@ const AddCommentForm = () => {
         setName("");
         setComment("");
         alertify.success("Yorum kaydedildi", 3);
+        window.location.href=`/#/posts/${postId}`;
       }
     } catch (error) {
       alertify.error(`Kayıt esnasında oluşan hata: ${error}`, 3);
