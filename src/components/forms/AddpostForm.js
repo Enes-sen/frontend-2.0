@@ -4,6 +4,7 @@ import FileBase64 from "react-file-base64";
 import { addPost } from "../../redux/actions/postActions";
 import { Button, Form, FormGroup, Input, Label } from "reactstrap";
 import alertify from "alertifyjs";
+import deleteLogo from "../../images/Kaldr_Logo.png";
 const AddPostForm = () => {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
@@ -67,7 +68,7 @@ const AddPostForm = () => {
           <FileBase64 multiple={false} onDone={({ base64 }) => setFile(base64)} />
         </FormGroup>
         <Button style={{backgroundColor: "rgb(255, 165, 0)",color:"white"}} onClick={() => clearAll()}>
-          Vazgeç
+          <img src={deleteLogo} alt="Brand logo" width="35" height="35" />
         </Button>{" "}
         <Button type="submit" style={{backgroundColor: "rgb(255, 165, 0)",color:"white"}} variant="outlined">
           Paylaş
