@@ -26,13 +26,13 @@ const SinglePost = () => {
   }, [dispatch, id]);
 
   const convertRelativeTime = (date) => {
-    return moment(date).locale('tr').format('lll');
+    return moment(date).locale('tr').fromNow();
   };
 
   const handleDelete = () => {
     if (window.confirm("Bu gönderiyi silmek istediğinize emin misiniz?")) {
       dispatch(removePost(currentPost._id));
-      window.location.href="/posts";
+      window.location.href="/#/posts";
     }
   };
 
@@ -46,13 +46,12 @@ const SinglePost = () => {
       flexDirection: "column",
       alignItems: "center",
       width: "80%",
-      maxWidth: "1200px",
       margin: "0 auto",
       padding: "0 15px",
     }}>
-      <Card style={{ width: "90%", marginTop: "7%" }}>
+      <Card style={{ width: "100%", marginTop: "7%" }}>
         <CardHeader tag={"h1"}>{currentPost.title}</CardHeader>
-        <CardImg alt="Card image cap" src={currentPost.image || noImage} style={{height:"60%",width:"70%" }}/>
+        <CardImg alt="Card image cap" src={currentPost.image || nll} style={{height:"60%",width:"70%" }}/>
         <CardBody>
           <Badge color="primary">
             {convertRelativeTime(currentPost.date)}
