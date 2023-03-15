@@ -59,16 +59,18 @@ const PostsList = () => {
       .map((post, index) => (
         <React.Fragment key={index}>
           <Card className="mt-5" style={{ width: "100%",  margin: "0 auto", marginTop:"200px",marginBottom:"200px", padding: "10px" }}>
-            <CardImg
-              alt="Card image cap"
-              src={post.image || none}
-              top
-              width="100%"
-            />
             <CardBody>
               <CardTitle tag="h5">{post.title}</CardTitle>
               <Badge color="primary">{convertRelativeTime(post.date)}</Badge>
               <CardText>{post.content}</CardText>
+               {post.image && (
+                   <CardImg
+                       alt="Card image cap"
+                       src={post.image}
+                       top
+                       width="100%"
+                       />
+                 )}
               <Link className="btn btn-primary" to={`/posts/${post._id}`}>
                 daha fazla
               </Link>
