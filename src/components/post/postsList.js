@@ -61,7 +61,7 @@ const PostsList = () => {
           <Card className="mt-5" style={{ width: "100%",  margin: "0 auto", marginTop:"200px",marginBottom:"200px", padding: "10px" }}>
             <CardBody>
               <CardTitle tag="h5">{post.title}</CardTitle>
-              <Badge color="primary">{convertRelativeTime(post.date)}</Badge>
+              <Badge style={{backgroundColor: "rgb(255, 165, 0)",color:"white"}}>{convertRelativeTime(post.date)}</Badge>
               <CardText>{post.content}</CardText>
                {post.image && (
                    <CardImg
