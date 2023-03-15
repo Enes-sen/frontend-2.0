@@ -22,7 +22,7 @@ export default class Navi extends Component {
     return (
       <Navbar style={{backgroundColor: "rgb(255, 165, 0)",color:"white"}} expand="md" fixed="top" className="mb-3">
         <NavbarBrand tag={Link} to="/">
-          <img src={brandLogo} alt="Brand logo" width="100" height="100" />
+          <img src={brandLogo} alt="Brand logo" width="10" height="10" />
         </NavbarBrand>
         <NavbarToggler onClick={this.toggle} />
         <Collapse isOpen={this.state.isOpen} navbar>
