@@ -58,9 +58,9 @@ const AddCommentForm = () => {
             onChange={(e) => setComment(e.target.value)}
           />
         </FormGroup>
-        <Button type="submit" color="primary" variant="outlined">
-          Yorum Yap
-        </Button>
+        <Button type="submit" style={{backgroundColor: "rgb(0, 0, 0)",color:"white"}} variant="outlined">
+           Yorum Yap
+       </Button>
       </Form>
     </div>
   );
