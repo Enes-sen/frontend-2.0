@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import FileBase64 from "react-file-base64";
 import { addPost } from "../../redux/actions/postActions";
 import { Button, Form, FormGroup, Input, Label } from "reactstrap";
+import {FaImage} from "react-icons/fa";
 import alertify from "alertifyjs";
 import deleteLogo from "../../images/Kaldr_Logo.png";
 const AddPostForm = () => {
@@ -65,7 +66,7 @@ const AddPostForm = () => {
           />
         </FormGroup>
         <FormGroup>
-          <FileBase64 multiple={false} onDone={({ base64 }) => setFile(base64)} />
+          <FileBase64 multiple={false} onDone={({ base64 }) => setFile(base64)} ><FaImage style={{backgroundColor: "rgb(255, 165, 0)",color:"white"}}/><FileBase64/>
         </FormGroup>
         <Button style={{backgroundColor: "rgb(255, 165, 0)",color:"white"}} onClick={() => clearAll()}>
           <img src={deleteLogo} alt="Brand logo" width="35" height="35" />
