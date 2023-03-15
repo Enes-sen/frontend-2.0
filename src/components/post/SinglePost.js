@@ -47,6 +47,7 @@ const SinglePost = () => {
       alignItems: "center",
       textAlign:"center",
       width: "50%",
+      marginTop:"5%",
       margin: "0 auto",
       padding: "0 15px",
     }}>
