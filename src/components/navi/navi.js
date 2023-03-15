@@ -20,7 +20,7 @@ export default class Navi extends Component {
 
   render() {
     return (
-      <Navbar style={{backgroundColor: "rgb(255, 165, 0)",color:"white"}} expand="md" fixed="top" className="mb-3">
+      <Navbar style={{backgroundColor: "rgb(255, 165, 0)",color:"white"}} expand="md" fixed="top" className="mb-5">
         <NavbarBrand tag={Link} to="/posts">
           <img src={brandLogo} alt="Brand logo" width="35" height="35" />
         </NavbarBrand>
