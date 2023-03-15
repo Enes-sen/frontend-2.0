@@ -36,7 +36,7 @@ const PostsList = () => {
   }
 
   if (!Array.isArray(posts)) {
-    return <div>Gösterilecek gönderi yok</div>;
+    return <div style={{ alignItems: "center", textAlign:"center"}}>Gösterilecek gönderi yok</div>;
   }
   
  return (
@@ -46,6 +46,7 @@ const PostsList = () => {
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
+      textAlign:"center",
       position: "relative", // set position to relative
       marginTop: "35%",
       marginBottom: "160px",
