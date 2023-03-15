@@ -13,7 +13,7 @@ const CommentList = () => {
   const comments = useSelector((state) => state.posts.comments);
   const dispatch = useDispatch();
   const convertRelativeTime = (date) => {
-    return moment(date).locale('tr').format('lll');
+    return moment(date).locale('tr').fromNow();
   };
 
  
