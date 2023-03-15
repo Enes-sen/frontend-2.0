@@ -69,7 +69,9 @@ const AddPostForm = () => {
         <FormGroup>
           <FileBase64
   multiple={false}
-  onDone={({ base64 }) => setFile(base64)} icon={<FaImage style={{backgroundColor: "rgb(255, 165, 0)",color:"white"}} />} iconStyle={{ fontSize: '24px' }}/>
+  onDone={({ base64 }) => setFile(base64)}>
+    <Button>deneme<Button/>
+    <FileBase64/>
         </FormGroup>
         <FormGroup>
           <Button style={{backgroundColor: "rgb(255, 165, 0)",color:"white"}} onClick={() => clearAll()}>
