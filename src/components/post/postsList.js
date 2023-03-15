@@ -61,10 +61,7 @@ const PostsList = () => {
           <Card className="mt-5" style={{ width: "100%",  margin: "0 auto", marginTop:"200px",marginBottom:"200px", padding: "10px" }}>
             <CardImg
               alt="Card image cap"
-              src={post.image || null}
-              style={{
-                height: "600px",
-              }}
+              src={post.image || none}
               top
               width="100%"
             />
