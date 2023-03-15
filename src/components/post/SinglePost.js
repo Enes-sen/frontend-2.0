@@ -11,6 +11,7 @@ import {
   CardImg,
   Badge,
 } from "reactstrap";
+import deleteLogo from "../../images/Kaldr_Logo.png";
 import CommentList from "./CommentList";
 import AddCommentForm from "../forms/AddCommentForm";
 import "moment/locale/tr";
@@ -65,7 +66,7 @@ const SinglePost = () => {
             }}
           >
             <Button color="danger" onClick={handleDelete}>
-              Kaldır
+              <img src={deleteLogo} alt="Brand logo" width="35" height="35" />
             </Button>
           </div>
         </CardBody>
