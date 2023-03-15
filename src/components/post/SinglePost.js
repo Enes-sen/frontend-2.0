@@ -72,7 +72,7 @@ const SinglePost = () => {
           </div>
         </CardBody>
       </Card>
-      <AddCommentForm postId={id} />
+      <AddCommentForm />
       <CommentList/>
     </div>
   );
