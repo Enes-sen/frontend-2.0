@@ -61,7 +61,7 @@ const PostsList = () => {
       .sort((a, b) => new Date(b.date) - new Date(a.date))
       .map((post, index) => (
         <React.Fragment key={index}>
-          <Card className="mt-5" style={{ width: "100%",  margin: "0 auto", marginTop:"200px",marginBottom:"200px", padding: "10px" }}>
+          <Card className="mt-3" style={{ width: "100%",  margin: "0 auto", marginTop:"100px",marginBottom:"100px", padding: "10px" }}>
             <CardBody>
               <CardTitle tag="h5">{post.title}</CardTitle>
               <Badge style={{backgroundColor: "rgb(255, 165, 0)",color:"white"}}>{convertRelativeTime(post.date)}</Badge>
