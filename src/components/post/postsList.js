@@ -71,7 +71,7 @@ const PostsList = () => {
                        width="100%"
                        />
                  )}
-              <Link className="btn btn-primary" to={`/posts/${post._id}`}>
+              <Link className="btn"style={{backgroundColor: "rgb(255, 165, 0)",color:"white"}} to={`/posts/${post._id}`}>
                 daha fazla
               </Link>
             </CardBody>
