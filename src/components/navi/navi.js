@@ -25,9 +25,6 @@ export default class Navi extends Component {
         <Collapse isOpen={this.state.isOpen} navbar>
           <Nav style={{marginLeft:"78%"}} navbar>
             <NavItem>
-              <NavLink tag={Link} to="/posts">Ana sayfa</NavLink>
-            </NavItem>
-            <NavItem>
               <NavLink tag={Link} to="/posts/newpost">Yeni Yazı</NavLink>
             </NavItem>
           </Nav>
