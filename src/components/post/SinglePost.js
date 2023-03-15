@@ -51,12 +51,12 @@ const SinglePost = () => {
     }}>
       <Card style={{ width: "100%", marginTop: "7%" }}>
         <CardHeader tag={"h1"}>{currentPost.title}</CardHeader>
-        <CardImg alt="Card image cap" src={currentPost.image || none}/>
         <CardBody>
+          <CardText>{currentPost.content}</CardText>
           <Badge color="primary">
             {convertRelativeTime(currentPost.date)}
           </Badge>
-          <CardText>{currentPost.content}</CardText>
+          {currentPost.image && <CardImg src={currentPost.image} />}
           <div
             style={{
               display: "flex",
