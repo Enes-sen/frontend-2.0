@@ -72,7 +72,7 @@ const AddPostForm = () => {
         </FormGroup>
         <FormGroup>
           <Button style={{backgroundColor: "rgb(255, 165, 0)",color:"white"}} onClick={() => clearAll()}>
-            <img src={deleteLogo} alt="Brand logo" width="35" height="35" />
+            <img src={deleteLogo} alt="Brand logo" width="25" height="25" />
           </Button>{" "}
           <Button type="submit" style={{backgroundColor: "rgb(255, 165, 0)",color:"white"}} variant="outlined">
             Paylaş
