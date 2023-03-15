@@ -12,6 +12,7 @@ import {
   Badge,
 } from "reactstrap";
 import "moment/locale/tr";
+import AddpostForm from "../forms/AddpostForm";
 
 const PostsList = () => {
   const [loading, setLoading] = useState(true);
@@ -53,6 +54,7 @@ const PostsList = () => {
       margin: "0 auto",
     }}
   >
+    <AddpostForm/>
     {/* map over the posts */}
     {posts
       .sort((a, b) => new Date(b.date) - new Date(a.date))
