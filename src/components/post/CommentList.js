@@ -29,7 +29,7 @@ const CommentList = () => {
   const handleDelete = (comment) => {
     if (window.confirm("Bu Yorum'u Silmek İstediğiniz'e Emin Misiniz?")) {
       dispatch(removeComment(comment._id));
-      window.location.href="/";
+      window.location.reload();
       
     }
   };
