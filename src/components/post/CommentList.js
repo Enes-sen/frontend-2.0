@@ -46,7 +46,6 @@ const CommentList = () => {
 
   return (
     <div>
-      <h2>Yorumlar:</h2>
       {commentsArray.sort((a, b) => new Date(b.date) - new Date(a.date)).map((comment) => (
         <Card className="mt-5" style={{ width: '100%', margin: '0 auto', padding: '10px' }} key={comment._id}>
           <CardBody>
