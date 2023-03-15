@@ -4,7 +4,6 @@ import FileBase64 from "react-file-base64";
 import { addPost } from "../../redux/actions/postActions";
 import { Button, Form, FormGroup, Input, Label } from "reactstrap";
 import alertify from "alertifyjs";
-
 const AddPostForm = () => {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
@@ -27,6 +26,7 @@ const AddPostForm = () => {
         setTitle("");
         setContent("");
         alertify.success("Post kaydedildi", 3);
+        window.location.href="/#/posts";
       }
     } catch (error) {
       alertify.error(`Kayıt esnasında oluşan hata: ${error}`, 3);
@@ -42,37 +42,35 @@ const AddPostForm = () => {
 
   return (
     <div style={{ width: "80%", marginLeft: "10%", marginTop: "15%" }}>
-      <h2 className="text-center">Yeni Yazı Yayınla</h2>
       <Form onSubmit={handleSubmit}>
         <FormGroup>
-          <Label for="title">İsim</Label>
           <Input
             type="text"
             name="title"
+            placeholder="İsminiz.."
             id="title"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
           />
         </FormGroup>
         <FormGroup>
-          <Label for="content">Yazı</Label>
           <Input
             type="textarea"
             name="content"
+            placeholder="Yazınız.."
             id="content"
             value={content}
             onChange={(e) => setContent(e.target.value)}
           />
         </FormGroup>
         <FormGroup>
-          <Label for="file">Görsel</Label>
           <FileBase64 multiple={false} onDone={({ base64 }) => setFile(base64)} />
         </FormGroup>
-        <Button color="danger" onClick={() => clearAll()}>
+        <Button style={{backgroundColor: "rgb(255, 165, 0)",color:"white"}} onClick={() => clearAll()}>
           Vazgeç
         </Button>{" "}
-        <Button type="submit" color="primary" variant="outlined">
-          Yayınla
+        <Button type="submit" style={{backgroundColor: "rgb(255, 165, 0)",color:"white"}} variant="outlined">
+          Paylaş
         </Button>
       </Form>
     </div>
