@@ -52,7 +52,7 @@ const SinglePost = () => {
     }}>
       <Card style={{ width: "100%", marginTop: "10%" }}>
         <CardBody>
-          <h1>{currentPost.title}<h1/>
+          <h1>{currentPost.title}</h1>
           <CardText>{currentPost.content}</CardText>
           <Badge style={{backgroundColor: "rgb(255, 165, 0)",color:"white"}}>
             {convertRelativeTime(currentPost.date)}
@@ -65,7 +65,7 @@ const SinglePost = () => {
               marginTop: "20px",
             }}
           >
-            <Button color="danger" onClick={handleDelete}>
+            <Button  style={{backgroundColor: "rgb(255, 165, 0)",color:"white"}} onClick={handleDelete}>
               <img src={deleteLogo} alt="Brand logo" width="35" height="35" />
             </Button>
           </div>
