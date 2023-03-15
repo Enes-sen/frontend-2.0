@@ -45,7 +45,8 @@ const SinglePost = () => {
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
-      width: "60%",
+      textAlign:"center",
+      width: "50%",
       margin: "0 auto",
       padding: "0 15px",
     }}>
