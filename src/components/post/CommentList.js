@@ -48,7 +48,7 @@ const CommentList = () => {
         <Card className="mt-5" style={{ width: '100%', margin: '0 auto', padding: '10px' }} key={comment._id}>
           <CardBody>
             <CardTitle tag="h5">{comment.name}</CardTitle>
-            <Badge color="primary">{convertRelativeTime(comment.date)}</Badge>
+            <Badge style={{backgroundColor: "rgb(255, 165, 0)",color:"white"}}>{convertRelativeTime(comment.date)}</Badge>
             <CardText>{comment.comment}</CardText>
             <Button color="danger" onClick={() => handleDelete(comment)}>Sil</Button>
           </CardBody>
