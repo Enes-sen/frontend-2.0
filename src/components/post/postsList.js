@@ -11,7 +11,6 @@ import {
   CardImg,
   Badge,
 } from "reactstrap";
-import noImage from "../../images/download.png";
 import "moment/locale/tr";
 
 const PostsList = () => {
