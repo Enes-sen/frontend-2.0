@@ -2,11 +2,14 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { Button, Form, FormGroup, Input, Label } from "reactstrap";
 import { addComment } from "../../redux/actions/postActions";
+import { useParams } from 'react-router-dom';
 import alertify from "alertifyjs";
 
 const AddCommentForm = ({ postId }) => {
   const [name, setName] = useState("");
   const [comment, setComment] = useState("");
+  const { id } = useParams();
+  const postId = id;
 
   const dispatch = useDispatch();
 
@@ -25,7 +28,6 @@ const AddCommentForm = ({ postId }) => {
         setName("");
         setComment("");
         alertify.success("Yorum kaydedildi", 3);
-        window.location.href="/";
       }
     } catch (error) {
       alertify.error(`Kayıt esnasında oluşan hata: ${error}`, 3);
