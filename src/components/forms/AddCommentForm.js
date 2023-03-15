@@ -36,25 +36,24 @@ const AddCommentForm = () => {
   };
 
   return (
-    <div style={{ width: "80%", marginLeft: "10%", marginTop: "5%" }}>
-      <h2 className="text-center">Yorum Yap</h2>
+    <div style={{ width: "60%", marginLeft: "10%", marginTop: "5%" }}>
       <Form onSubmit={handleSubmit}>
         <FormGroup>
-          <Label for="name">Adınız</Label>
           <Input
             type="text"
             name="name"
             id="name"
             value={name}
+            placeholder="*Adınız"
             onChange={(e) => setName(e.target.value)}
           />
         </FormGroup>
         <FormGroup>
-          <Label for="comment">Yorum</Label>
           <Input
             type="textarea"
             name="comment"
             id="comment"
+            placeholder="*Yorumunuz"
             value={comment}
             onChange={(e) => setComment(e.target.value)}
           />
