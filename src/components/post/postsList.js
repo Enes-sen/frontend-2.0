@@ -19,7 +19,7 @@ const PostsList = () => {
   const dispatch = useDispatch();
   const posts = useSelector((state) => state.posts.posts);
    const convertRelativeTime = (date) => {
-    return moment(date).locale('tr').format('lll');
+    return moment(date).locale('tr').fromNow();
   };
 
   useEffect(() => {
@@ -47,10 +47,10 @@ const PostsList = () => {
       flexDirection: "column",
       alignItems: "center",
       position: "relative", // set position to relative
-      marginTop: "45%",
+      marginTop: "35%",
       marginBottom: "160px",
       height: "600px",
-      width: "80%", // set width
+      width: "33%", // set width
       margin: "0 auto",
     }}
   >
@@ -62,7 +62,7 @@ const PostsList = () => {
           <Card className="mt-5" style={{ width: "100%",  margin: "0 auto", marginTop:"200px",marginBottom:"200px", padding: "10px" }}>
             <CardImg
               alt="Card image cap"
-              src={post.image || noImage}
+              src={post.image || null}
               style={{
                 height: "600px",
               }}
