@@ -35,15 +35,15 @@ const CommentList = () => {
   const commentsArray = comments?.comments?.comments;
 
   if (loading) {
-    return <div>Yükleniyor...</div>;
+    return <div style={{ textAlign:"center"}}>Yükleniyor...</div>;
   }
 
   if (!Array.isArray(commentsArray) || commentsArray.length === 0) {
-    return <div>Gösterilecek yorum yok</div>;
+    return <div style={{ textAlign:"center"}}>Gösterilecek yorum yok</div>;
   }
 
   return (
-    <div>
+    <div style={{ textAlign:"center"}}>
       {commentsArray.sort((a, b) => new Date(b.date) - new Date(a.date)).map((comment) => (
         <Card className="mt-5" style={{ width: '100%', margin: '0 auto', padding: '10px' }} key={comment._id}>
           <CardBody>
