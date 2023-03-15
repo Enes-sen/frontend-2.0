@@ -13,6 +13,6 @@ root.render(
   <HashRouter>
     <Provider store={store}>
       <App />
-    </HashRouter>
-  </BrowserRouter>
+    </Provider>
+  </HashRouter>
 );
