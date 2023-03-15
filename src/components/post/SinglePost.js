@@ -12,7 +12,6 @@ import {
   CardImg,
   Badge,
 } from "reactstrap";
-import noImage from "../../images/download.png";
 import CommentList from "./CommentList";
 import AddCommentForm from "../forms/AddCommentForm";
 import "moment/locale/tr";
@@ -46,7 +45,7 @@ const SinglePost = () => {
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
-      width: "100%",
+      width: "80%",
       maxWidth: "1200px",
       margin: "0 auto",
       padding: "0 15px",
