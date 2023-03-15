@@ -53,7 +53,7 @@ const SinglePost = () => {
         <CardHeader tag={"h1"}>{currentPost.title}</CardHeader>
         <CardBody>
           <CardText>{currentPost.content}</CardText>
-          <Badge color="primary">
+          <Badge style={{backgroundColor: "rgb(255, 165, 0)",color:"white"}}>
             {convertRelativeTime(currentPost.date)}
           </Badge>
           {currentPost.image && <CardImg src={currentPost.image} />}
