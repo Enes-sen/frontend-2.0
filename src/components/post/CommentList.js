@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { fetchPostComments, removeComment } from '../../redux/actions/postActions';
 import { Card, CardBody, CardTitle, CardText, Badge, Button } from 'reactstrap';
+import deleteLogo from "../../images/Kaldr_Logo.png";
 import moment from 'moment';
 
 const CommentList = () => {
@@ -50,7 +51,7 @@ const CommentList = () => {
             <CardTitle tag="h5">{comment.name}</CardTitle>
             <Badge style={{backgroundColor: "rgb(255, 165, 0)",color:"white"}}>{convertRelativeTime(comment.date)}</Badge>
             <CardText>{comment.comment}</CardText>
-            <Button color="danger" onClick={() => handleDelete(comment)}>Sil</Button>
+            <Button color="danger" onClick={() => handleDelete(comment)}><img src={deleteLogo} alt="Brand logo" width="35" height="35" /></Button>
           </CardBody>
         </Card>
       ))}
