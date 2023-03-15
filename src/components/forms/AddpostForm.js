@@ -71,7 +71,7 @@ const AddPostForm = () => {
   multiple={false}
   onDone={({ base64 }) => setFile(base64)}>
     <Button>deneme</Button>
-    <FileBase64/>
+    </FileBase64>
         </FormGroup>
         <FormGroup>
           <Button style={{backgroundColor: "rgb(255, 165, 0)",color:"white"}} onClick={() => clearAll()}>
