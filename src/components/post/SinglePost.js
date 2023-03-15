@@ -45,13 +45,13 @@ const SinglePost = () => {
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
-      width: "80%",
+      width: "60%",
       margin: "0 auto",
       padding: "0 15px",
     }}>
       <Card style={{ width: "100%", marginTop: "7%" }}>
         <CardHeader tag={"h1"}>{currentPost.title}</CardHeader>
-        <CardImg alt="Card image cap" src={currentPost.image || null} style={{height:"60%",width:"70%" }}/>
+        <CardImg alt="Card image cap" src={currentPost.image || none}/>
         <CardBody>
           <Badge color="primary">
             {convertRelativeTime(currentPost.date)}
