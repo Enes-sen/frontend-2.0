@@ -21,10 +21,9 @@ export default class Navi extends Component {
   render() {
     return (
       <Navbar style={{backgroundColor: "rgb(255, 165, 0)",color:"white"}} expand="md" fixed="top" className="mb-3">
-        <NavbarBrand tag={Link} to="/">
-          <img src={brandLogo} alt="Brand logo" width="10" height="10" />
+        <NavbarBrand tag={Link} to="/posts">
+          <img src={brandLogo} alt="Brand logo" width="10" height="30" />
         </NavbarBrand>
-        <NavbarToggler onClick={this.toggle} />
         <Collapse isOpen={this.state.isOpen} navbar>
         </Collapse>
       </Navbar>
