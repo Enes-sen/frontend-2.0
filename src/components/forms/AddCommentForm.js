@@ -5,7 +5,7 @@ import { addComment } from "../../redux/actions/postActions";
 import { useParams } from 'react-router-dom';
 import alertify from "alertifyjs";
 
-const AddCommentForm = ({ postId }) => {
+const AddCommentForm = () => {
   const [name, setName] = useState("");
   const [comment, setComment] = useState("");
   const { id } = useParams();
