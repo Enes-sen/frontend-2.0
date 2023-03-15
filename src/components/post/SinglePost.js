@@ -6,7 +6,6 @@ import moment from "moment";
 import {
   Card,
   CardBody,
-  CardHeader,
   CardText,
   Button,
   CardImg,
@@ -50,9 +49,9 @@ const SinglePost = () => {
       margin: "0 auto",
       padding: "0 15px",
     }}>
-      <Card style={{ width: "100%", marginTop: "7%" }}>
-        <CardHeader tag={"h1"}>{currentPost.title}</CardHeader>
+      <Card style={{ width: "100%", marginTop: "10%" }}>
         <CardBody>
+          <h1>{currentPost.title}<h1/>
           <CardText>{currentPost.content}</CardText>
           <Badge style={{backgroundColor: "rgb(255, 165, 0)",color:"white"}}>
             {convertRelativeTime(currentPost.date)}
