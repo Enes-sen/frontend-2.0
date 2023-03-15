@@ -19,15 +19,10 @@ export default class Navi extends Component {
 
   render() {
     return (
-      <Navbar color="dark" dark expand="md" fixed="top" className="mb-3">
+      <Navbar style={{backgroundColor: "rgb(255, 165, 0)",color:"white"}} expand="md" fixed="top" className="mb-3">
         <NavbarBrand tag={Link} to="/posts">FistBlog</NavbarBrand>
         <NavbarToggler onClick={this.toggle} />
         <Collapse isOpen={this.state.isOpen} navbar>
-          <Nav style={{marginLeft:"78%"}} navbar>
-            <NavItem>
-              <NavLink tag={Link} to="/posts/newpost">Yeni Yazı</NavLink>
-            </NavItem>
-          </Nav>
         </Collapse>
       </Navbar>
     );
