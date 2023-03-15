@@ -28,7 +28,6 @@ const AddCommentForm = () => {
         setName("");
         setComment("");
         alertify.success("Yorum kaydedildi", 3);
-        window.location.reload();
       }
     } catch (error) {
       alertify.error(`Kayıt esnasında oluşan hata: ${error}`, 3);
