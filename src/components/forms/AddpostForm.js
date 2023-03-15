@@ -6,6 +6,7 @@ import { Button, Form, FormGroup, Input, Label } from "reactstrap";
 import {FaImage} from "react-icons/fa";
 import alertify from "alertifyjs";
 import deleteLogo from "../../images/Kaldr_Logo.png";
+
 const AddPostForm = () => {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
@@ -66,14 +67,17 @@ const AddPostForm = () => {
           />
         </FormGroup>
         <FormGroup>
-          <FileBase64 multiple={false} onDone={({ base64 }) => setFile(base64)} ><FaImage style={{backgroundColor: "rgb(255, 165, 0)",color:"white"}}/><FileBase64/>
+          <FileBase64 multiple={false} onDone={({ base64 }) => setFile(base64)} />
+          <FaImage style={{backgroundColor: "rgb(255, 165, 0)",color:"white"}} />
         </FormGroup>
-        <Button style={{backgroundColor: "rgb(255, 165, 0)",color:"white"}} onClick={() => clearAll()}>
-          <img src={deleteLogo} alt="Brand logo" width="35" height="35" />
-        </Button>{" "}
-        <Button type="submit" style={{backgroundColor: "rgb(255, 165, 0)",color:"white"}} variant="outlined">
-          Paylaş
-        </Button>
+        <FormGroup>
+          <Button style={{backgroundColor: "rgb(255, 165, 0)",color:"white"}} onClick={() => clearAll()}>
+            <img src={deleteLogo} alt="Brand logo" width="35" height="35" />
+          </Button>{" "}
+          <Button type="submit" style={{backgroundColor: "rgb(255, 165, 0)",color:"white"}} variant="outlined">
+            Paylaş
+          </Button>
+        </FormGroup>
       </Form>
     </div>
   );
